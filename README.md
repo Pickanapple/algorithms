@@ -6,4 +6,4 @@ Various important algorithms categorised based on type
 
 ### Graph traversal
 
-- Dijkstra
+- Dijkstra: a simple algorithm that takes weight into account
