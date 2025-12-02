@@ -1,5 +1,5 @@
 class Node:
-    def __init__(self, links: list = [], key = None):
+    def __init__(self, links: list = None, key = None):
         """A node used in the graph
 
         Args:
@@ -45,8 +45,8 @@ def dijkstra(start: Node, goal: Node, unvisited: set):
         
         for i in currentNode.links: 
             if i[0] in unvisited: 
-                if i[1] < i[0].weight: 
-                    i[0].weight = i[1]
+                if currentNode.weight + i[1] < i[0].weight: 
+                    i[0].weight = currentNode.weight + i[1]
                     i[0].prev = currentNode
         
         unvisited.remove(currentNode)
