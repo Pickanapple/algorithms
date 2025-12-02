@@ -8,6 +8,8 @@ def checkList(l):
             sorted = False
             break
 
+    return sorted
+
 def bogoSort(l): 
     if checkList(l): return l
 
@@ -17,5 +19,5 @@ def bogoSort(l):
     return l
 
 if __name__ == "__main__": 
-    l = [2, 4, 1, 3, 5, 2, 5, 3, 9]
+    l = [3, 2, 1, 4]
     print(bogoSort(l))
